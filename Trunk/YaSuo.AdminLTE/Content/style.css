@@ -1,2 +1,10 @@
-﻿.content-header > h1 { font-size: 19px; }
-    .content-header > h1 > small { font-size: 13px; }
+﻿.w-150 { width: 150px !important; }
+.w-250 { width: 250px !important; }
+
+.SearchBox { padding-bottom: 0px; }
+.SearchBody { padding-top: 15px; }
+    .SearchBody .control-label { text-align: left; }
+
+@media (max-width: 991px) {
+    .SearchBox .input-group { padding-top: 10px; }
+}

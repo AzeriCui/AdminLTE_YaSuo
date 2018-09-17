@@ -16,7 +16,7 @@ namespace YaSuo.AdminLTE
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}",
-                defaults: new { controller = "Default", action = "Index" }
+                defaults: new { controller = "Default", action = "Default" }
             );
         }
     }

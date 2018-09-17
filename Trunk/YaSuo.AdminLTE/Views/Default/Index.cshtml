@@ -1,8 +1,234 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.TitleDesc = "Index description";
 }
-
-<h2>Index</h2>
-
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <form action="/" method="get">
+                <div class="box-header SearchBox hide-box">
+                    <div class="row SearchHeader" data-iscollapse="true">
+                        <div class="col-md-8">
+                            <a class="btn btn-danger" href="javascript:void(0);"><i class="fa fa-trash-o"></i> 删除</a>
+                            <a class="btn btn-info" href="@Url.Action("Create", "Default")"><i class="fa fa-plus"></i> 添加</a>
+                            <a class="btn btn-warning" href="javascript:void(0);"><i class="fa fa-print"></i> 导出</a>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="关键字" />
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-success" data-widget="more">
+                                        <i class="fa fa-angle-double-up"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row SearchBody" style="display: none;">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Color</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Rendering engine</th>
+                            <th>Browser</th>
+                            <th>Platform(s)</th>
+                            <th>Engine version</th>
+                            <th>Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td>1.7</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.5</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td>1.8</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 2.0</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td>1.8</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 3.0</td>
+                            <td>Win 2k+ / OSX.3+</td>
+                            <td>1.9</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Camino 1.0</td>
+                            <td>OSX.2+</td>
+                            <td>1.8</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Camino 1.5</td>
+                            <td>OSX.3+</td>
+                            <td>1.8</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Netscape 7.2</td>
+                            <td>Win 95+ / Mac OS 8.6-9.2</td>
+                            <td>1.7</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Netscape Browser 8</td>
+                            <td>Win 98SE+</td>
+                            <td>1.7</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Netscape Navigator 9</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td>1.8</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Mozilla 1.0</td>
+                            <td>Win 95+ / OSX.1+</td>
+                            <td>1</td>
+                            <td>
+                                <button type="button" class="btn btn-primary"><i class="fa fa-file-text-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-edit"></i> </button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+                                <button type="button" class="btn btn-info"><i class="fa fa-copy"></i> </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="box-footer clearfix">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
