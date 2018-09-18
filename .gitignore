@@ -1,3 +1,6 @@
 [Tt]humbs.db
 bin
 obj
+*.suo
+*.DS_Store
+*.user
