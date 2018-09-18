@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "Create";
+    ViewBag.TitleDesc = "Create description";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-info">
+            <form action="#" method="post" class="form-horizontal">
+                <div class="box-header">
+                    <h3 class="box-title">Different Height</h3>
+                </div>
+                <div class="box-body">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Email" />
+                            <span class="help-block"><i class="fa fa-check"></i>Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group has-success">
+                        <label class="col-md-2 control-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Email" />
+                            <span class="help-block"><i class="fa fa-check"></i>Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Email" />
+                            <span class="help-block"><i class="fa fa-times-circle-o"></i>Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group has-error">
+                        <label class="col-md-2 control-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Email" />
+                            <span class="help-block"><i class="fa fa-times-circle-o"></i>Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Textarea</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" placeholder="Enter ..."></textarea>
+                            <span class="help-block">Help block with warning</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Textarea</label>
+                        <div class="col-md-10">
+                            <div class="checkbox checkbox-primary checkbox-inline">
+                                <input id="checkbox2" class="styled" type="checkbox" checked>
+                                <label for="checkbox2">
+                                    Primary
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-success checkbox-inline">
+                                <input id="checkbox3" class="styled" type="checkbox">
+                                <label for="checkbox3">
+                                    Success
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-info checkbox-inline">
+                                <input id="checkbox4" class="styled" type="checkbox">
+                                <label for="checkbox4">
+                                    Info
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Textarea</label>
+                        <div class="col-md-10">
+                            <div class="radio radio-danger radio-inline">
+                                <input type="radio" name="radio2" id="radio4" value="option2" />
+                                <label for="radio4">
+                                    One
+                                </label>
+                            </div>
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" name="radio2" id="radio5" value="option2" />
+                                <label for="radio5">
+                                    One
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Textarea</label>
+                        <div class="col-md-10">
+
+                            <select class="form-control select2">
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Textarea</label>
+                        <div class="col-md-10">
+
+                            <select class="form-control select2" multiple="multiple" data-placeholder="Select a State">
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="box-footer clearfix">
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-2">
+                            <button type="submit" class="btn btn-primary">提交</button>
+                            <button type="reset" class="btn btn-default">清除</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".select2").select2({
+            placeholder: "Select a state"
+        });
+    })
+</script>

@@ -1,4 +1,4 @@
-﻿+function ($) {
+﻿; +function ($) {
     'use strict';
 
     var DataKey = 'lte.searchmore';
@@ -120,14 +120,22 @@
         });
     }
 
+    var old = $.fn.SearchMore;
+
     $.fn.SearchMore = Plugin;
     $.fn.SearchMore.Constructor = SearchMore;
+
+    $.fn.SearchMore.noConflict = function () {
+        $.fn.SearchMore = old;
+        return this;
+    };
 
     $(window).on('load', function () {
         $(Selector.data).each(function () {
             Plugin.call($(this));
         });
     });
+
 }(jQuery);
 
 
