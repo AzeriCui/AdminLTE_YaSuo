@@ -8,3 +8,9 @@
 @media (max-width: 991px) {
     .SearchBox .input-group { padding-top: 10px; }
 }
+
+.has-success .select2-container--default .select2-selection--single,
+.has-success .select2-selection .select2-selection--single { border-color: #00a65a; }
+
+.has-error .select2-container--default .select2-selection--single,
+.has-error .select2-selection .select2-selection--single { border-color: #dd4b39; }

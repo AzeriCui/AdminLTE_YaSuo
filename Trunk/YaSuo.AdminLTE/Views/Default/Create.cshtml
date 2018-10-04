@@ -1,144 +1,124 @@
 ﻿@{
     ViewBag.Title = "Create";
     ViewBag.TitleDesc = "Create description";
+
 }
+@model YaSuo.AdminLTE.Models.AdminStaffModel
 <div class="row">
     <div class="col-md-12">
         <div class="box box-info">
-            <form action="#" method="post" class="form-horizontal">
-                <div class="box-header">
-                    <h3 class="box-title">Different Height</h3>
-                </div>
-                <div class="box-body">
+            <div class="box-header">
+                <h3 class="box-title">Different Height</h3>
+            </div>
+            <div class="box-body">
+                @using (Html.BeginForm("Create", "Default", FormMethod.Post, new { @class = "form-horizontal", autocomplete = "off", id = "formSave" }))
+                {
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Email</label>
+                        <label class="col-md-2 control-label">Id</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" placeholder="Email" />
-                            <span class="help-block"><i class="fa fa-check"></i>Help block with warning</span>
-                        </div>
-                    </div>
-                    <div class="form-group has-success">
-                        <label class="col-md-2 control-label">Email</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" placeholder="Email" />
-                            <span class="help-block"><i class="fa fa-check"></i>Help block with warning</span>
+                            @Html.TextBoxFor(o => o.Id, new { @class = "form-control", placeholder = "Id" })
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Email</label>
+                        <label class="col-md-2 control-label">Status</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" placeholder="Email" />
-                            <span class="help-block"><i class="fa fa-times-circle-o"></i>Help block with warning</span>
-                        </div>
-                    </div>
-                    <div class="form-group has-error">
-                        <label class="col-md-2 control-label">Email</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" placeholder="Email" />
-                            <span class="help-block"><i class="fa fa-times-circle-o"></i>Help block with warning</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Textarea</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" placeholder="Enter ..."></textarea>
-                            <span class="help-block">Help block with warning</span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Textarea</label>
-                        <div class="col-md-10">
-                            <div class="checkbox checkbox-primary checkbox-inline">
-                                <input id="checkbox2" class="styled" type="checkbox" checked>
-                                <label for="checkbox2">
-                                    Primary
-                                </label>
-                            </div>
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input id="checkbox3" class="styled" type="checkbox">
-                                <label for="checkbox3">
-                                    Success
-                                </label>
-                            </div>
-                            <div class="checkbox checkbox-info checkbox-inline">
-                                <input id="checkbox4" class="styled" type="checkbox">
-                                <label for="checkbox4">
-                                    Info
-                                </label>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Textarea</label>
-                        <div class="col-md-10">
-                            <div class="radio radio-danger radio-inline">
-                                <input type="radio" name="radio2" id="radio4" value="option2" />
-                                <label for="radio4">
-                                    One
-                                </label>
-                            </div>
                             <div class="radio radio-success radio-inline">
-                                <input type="radio" name="radio2" id="radio5" value="option2" />
-                                <label for="radio5">
-                                    One
-                                </label>
+                                @Html.RadioButtonFor(o => o.Status, 1, new { id = "Status1" })
+                                <label for="Status1">启用</label>
                             </div>
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(o => o.Status, 2, new { id = "Status2" })
+                                <label for="Status2">禁用</label>
+                            </div>
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Textarea</label>
+                        <label class="col-md-2 control-label">Sex</label>
                         <div class="col-md-10">
-
-                            <select class="form-control select2">
-                                <option>Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
-
+                            <div class="checkbox checkbox-success checkbox-inline">
+                                <input type="checkbox" class="styled" id="Sex1" name="Sex" value="true" />
+                                <label for="Sex1">男</label>
+                            </div>
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Textarea</label>
+                        <label class="col-md-2 control-label">Account</label>
                         <div class="col-md-10">
-
-                            <select class="form-control select2" multiple="multiple" data-placeholder="Select a State">
-                                <option>Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
-
+                            @Html.TextBoxFor(o => o.Account, new { @class = "form-control", placeholder = "Account" })
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
                         </div>
                     </div>
-
-                </div>
-                <div class="box-footer clearfix">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Password</label>
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(o => o.Password, new { @class = "form-control", placeholder = "Password" })
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">PasswordConfirm</label>
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(o => o.PasswordConfirm, new { @class = "form-control", placeholder = "PasswordConfirm" })
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">DepartmentId</label>
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(o => o.DepartmentId, null, new { @class = "form-control select2" })
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Birth</label>
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(o => o.Birth, new { @class = "form-control", placeholder = "Birth" })
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Descr</label>
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(o => o.Descr, new { @class = "form-control", placeholder = "Descr" })
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-2">
-                            <button type="submit" class="btn btn-primary">提交</button>
+                            <button type="submit" class="btn btn-primary" onclick="">提交</button>
                             <button type="reset" class="btn btn-default">清除</button>
                         </div>
                     </div>
-                </div>
-            </form>
-
+                }
+            </div>
+            <div class="box-footer clearfix">
+            </div>
         </div>
-
     </div>
 </div>
 <script>
     $(function () {
-        $(".select2").select2({
-            placeholder: "Select a state"
+        $(".select2").select2({ placeholder: "Select a state" });
+        $(".select2").on("select2:select", function (e) {
+            $(e.currentTarget).focus().blur();
+        })
+
+
+        $("#formSave").validate({
+            rules: {
+                Id: { required: true }
+               , Status: { required: true }
+               , Sex: { required: true }
+               , Account: { required: true }
+               , Password: { required: true }
+               , PasswordConfirm: { required: true }
+               , DepartmentId: { required: true }
+               , Birth: { required: true }
+               , Descr: { required: true }
+            }
         });
     })
 </script>

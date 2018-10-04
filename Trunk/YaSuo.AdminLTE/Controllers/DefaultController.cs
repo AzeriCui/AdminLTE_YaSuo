@@ -23,6 +23,15 @@ namespace YaSuo.AdminLTE.Controllers
         // GET: /Default/Create
         public ActionResult Create()
         {
+            IList<SelectListItem> departmentId = new List<SelectListItem>();
+            departmentId.Add(new SelectListItem() { Text = "", Value = "" });
+            departmentId.Add(new SelectListItem() { Text = "Department Id 1", Value = "1" });
+            departmentId.Add(new SelectListItem() { Text = "Department Id 2", Value = "2" });
+            departmentId.Add(new SelectListItem() { Text = "Department Id 3", Value = "3" });
+            departmentId.Add(new SelectListItem() { Text = "Department Id 4", Value = "4" });
+            departmentId.Add(new SelectListItem() { Text = "Department Id 5", Value = "5" });
+            ViewBag.DepartmentId = new SelectList(departmentId, "Value", "Text");
+
             return View();
         }
 

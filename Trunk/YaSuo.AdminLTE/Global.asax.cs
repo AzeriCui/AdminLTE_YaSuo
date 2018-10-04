@@ -15,6 +15,9 @@ namespace YaSuo.AdminLTE
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            ModelValidatorProviders.Providers.Clear();
+
         }
     }
 }
