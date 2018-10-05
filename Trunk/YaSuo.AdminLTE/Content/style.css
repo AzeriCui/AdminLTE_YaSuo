@@ -14,3 +14,7 @@
 
 .has-error .select2-container--default .select2-selection--single,
 .has-error .select2-selection .select2-selection--single { border-color: #dd4b39; }
+
+.has-success .select2-container--default .select2-selection--multiple { border-color: #00a65a; }
+
+.has-error .select2-container--default .select2-selection--multiple { border-color: #dd4b39; }

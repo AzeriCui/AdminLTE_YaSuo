@@ -24,11 +24,11 @@
                         <label class="col-md-2 control-label">Status</label>
                         <div class="col-md-10">
                             <div class="radio radio-success radio-inline">
-                                @Html.RadioButtonFor(o => o.Status, 1, new { id = "Status1" })
+                                @Html.RadioButtonFor(o => o.Status, 1, new { id = "Status1", @class = "ignore" })
                                 <label for="Status1">启用</label>
                             </div>
                             <div class="radio radio-danger radio-inline">
-                                @Html.RadioButtonFor(o => o.Status, 2, new { id = "Status2" })
+                                @Html.RadioButtonFor(o => o.Status, 2, new { id = "Status2", @class = "ignore" })
                                 <label for="Status2">禁用</label>
                             </div>
                             <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
@@ -38,7 +38,7 @@
                         <label class="col-md-2 control-label">Sex</label>
                         <div class="col-md-10">
                             <div class="checkbox checkbox-success checkbox-inline">
-                                <input type="checkbox" class="styled" id="Sex1" name="Sex" value="true" />
+                                <input type="checkbox" class="styled ignore" id="Sex1" name="Sex" value="true" />
                                 <label for="Sex1">男</label>
                             </div>
                             <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
@@ -47,21 +47,21 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label">Account</label>
                         <div class="col-md-10">
-                            @Html.TextBoxFor(o => o.Account, new { @class = "form-control", placeholder = "Account" })
+                            @Html.TextBoxFor(o => o.Account, new { @class = "form-control ignore", placeholder = "Account" })
                             <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-2 control-label">Password</label>
                         <div class="col-md-10">
-                            @Html.TextBoxFor(o => o.Password, new { @class = "form-control", placeholder = "Password" })
+                            @Html.TextBoxFor(o => o.Password, new { @class = "form-control ignore", placeholder = "Password" })
                             <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-2 control-label">PasswordConfirm</label>
                         <div class="col-md-10">
-                            @Html.TextBoxFor(o => o.PasswordConfirm, new { @class = "form-control", placeholder = "PasswordConfirm" })
+                            @Html.TextBoxFor(o => o.PasswordConfirm, new { @class = "form-control ignore", placeholder = "PasswordConfirm" })
                             <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
                         </div>
                     </div>
@@ -73,9 +73,16 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-md-2 control-label">RoleId</label>
+                        <div class="col-md-10">
+                            @Html.ListBoxFor(o => o.RoleId, null, new { @class = "form-control select2" })
+                            <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-md-2 control-label">Birth</label>
                         <div class="col-md-10">
-                            @Html.TextBoxFor(o => o.Birth, new { @class = "form-control", placeholder = "Birth" })
+                            @Html.TextBoxFor(o => o.Birth, new { @class = "form-control ignore", placeholder = "Birth" })
                             <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
                         </div>
                     </div>
@@ -102,7 +109,7 @@
 <script>
     $(function () {
         $(".select2").select2({ placeholder: "Select a state" });
-        $(".select2").on("select2:select", function (e) {
+        $(".select2").on("change", function (e) {
             $(e.currentTarget).focus().blur();
         })
 
@@ -110,14 +117,15 @@
         $("#formSave").validate({
             rules: {
                 Id: { required: true }
-               , Status: { required: true }
-               , Sex: { required: true }
-               , Account: { required: true }
-               , Password: { required: true }
-               , PasswordConfirm: { required: true }
+                //, Status: { required: true }
+                //, Sex: { required: true }
+                //, Account: { required: true }
+                //, Password: { required: true }
+                //, PasswordConfirm: { required: true }
                , DepartmentId: { required: true }
-               , Birth: { required: true }
-               , Descr: { required: true }
+               , RoleId: { required: true }
+                //, Birth: { required: true }
+                //, Descr: { required: true }
             }
         });
     })

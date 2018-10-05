@@ -8,23 +8,15 @@ namespace YaSuo.AdminLTE.Models
 {
     public class AdminStaffModel
     {
-        //[Required]
         public long Id { get; set; }
-        //[Required]
         public int Status { get; set; }
-        //[Required]
         public bool Sex { get; set; }
-        //[Required]
         public string Account { get; set; }
-        //[Required]
         public string Password { get; set; }
-        //[Required]
         public string PasswordConfirm { get; set; }
-        //[Required]
         public long DepartmentId { get; set; }
-        //[Required]
+        public long[] RoleId { get; set; }
         public DateTime Birth { get; set; }
-        //[Required]
         public string Descr { get; set; }
     }
 }

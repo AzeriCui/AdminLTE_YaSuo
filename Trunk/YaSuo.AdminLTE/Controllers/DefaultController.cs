@@ -32,6 +32,14 @@ namespace YaSuo.AdminLTE.Controllers
             departmentId.Add(new SelectListItem() { Text = "Department Id 5", Value = "5" });
             ViewBag.DepartmentId = new SelectList(departmentId, "Value", "Text");
 
+            IList<SelectListItem> roleId = new List<SelectListItem>();
+            roleId.Add(new SelectListItem() { Text = "Role Id 1", Value = "1" });
+            roleId.Add(new SelectListItem() { Text = "Role Id 2", Value = "2" });
+            roleId.Add(new SelectListItem() { Text = "Role Id 3", Value = "3" });
+            roleId.Add(new SelectListItem() { Text = "Role Id 4", Value = "4" });
+            roleId.Add(new SelectListItem() { Text = "Role Id 5", Value = "5" });
+            ViewBag.RoleId = new MultiSelectList(roleId, "Value", "Text");
+
             return View();
         }
 
