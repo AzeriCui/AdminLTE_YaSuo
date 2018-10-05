@@ -23,12 +23,12 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label">Status</label>
                         <div class="col-md-10">
-                            <div class="radio radio-success radio-inline">
-                                @Html.RadioButtonFor(o => o.Status, 1, new { id = "Status1", @class = "ignore" })
+                            <div class="radio radio-primary radio-inline">
+                                @Html.RadioButtonFor(o => o.Status, 1, new { id = "Status1", @class = "" })
                                 <label for="Status1">启用</label>
                             </div>
-                            <div class="radio radio-danger radio-inline">
-                                @Html.RadioButtonFor(o => o.Status, 2, new { id = "Status2", @class = "ignore" })
+                            <div class="radio radio-primary radio-inline">
+                                @Html.RadioButtonFor(o => o.Status, 2, new { id = "Status2", @class = "" })
                                 <label for="Status2">禁用</label>
                             </div>
                             <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
@@ -37,8 +37,8 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label">Sex</label>
                         <div class="col-md-10">
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input type="checkbox" class="styled ignore" id="Sex1" name="Sex" value="true" />
+                            <div class="checkbox checkbox-primary checkbox-inline">
+                                <input type="checkbox" class="styled" id="Sex1" name="Sex" value="true" />
                                 <label for="Sex1">男</label>
                             </div>
                             <span class="help-block"><i class="fa fa-bell-o"></i> Help block with warning</span>
@@ -116,16 +116,16 @@
 
         $("#formSave").validate({
             rules: {
-                Id: { required: true }
-                //, Status: { required: true }
-                //, Sex: { required: true }
-                //, Account: { required: true }
-                //, Password: { required: true }
-                //, PasswordConfirm: { required: true }
-               , DepartmentId: { required: true }
-               , RoleId: { required: true }
-                //, Birth: { required: true }
-                //, Descr: { required: true }
+                Id: { required: true, Test2: 5 }
+                , Status: { required: true }
+                , Sex: { required: true }
+                , Account: { required: true }
+                , Password: { required: true }
+                , PasswordConfirm: { required: true }
+                , DepartmentId: { required: true }
+                , RoleId: { required: true }
+                , Birth: { required: true }
+                , Descr: { required: true }
             }
         });
     })
