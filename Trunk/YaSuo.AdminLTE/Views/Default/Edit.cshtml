@@ -1,6 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Create";
-    ViewBag.TitleDesc = "Create description";
+    ViewBag.Title = "Edit";
+    ViewBag.TitleDesc = "Edit description";
 
 }
 @model YaSuo.AdminLTE.Models.AdminStaffModel
@@ -114,19 +114,19 @@
         })
 
 
-        //$("#formSave").validate({
-        //    rules: {
-        //        Id: { required: true, Test2: 5 }
-        //        , Status: { required: true }
-        //        , Sex: { required: true }
-        //        , Account: { required: true }
-        //        , Password: { required: true }
-        //        , PasswordConfirm: { required: true }
-        //        , DepartmentId: { required: true }
-        //        , RoleId: { required: true }
-        //        , Birth: { required: true }
-        //        , Descr: { required: true }
-        //    }
-        //});
+        $("#formSave").validate({
+            rules: {
+                Id: { required: true, Test2: 5 }
+                , Status: { required: true }
+                , Sex: { required: true }
+                , Account: { required: true }
+                , Password: { required: true }
+                , PasswordConfirm: { required: true }
+                , DepartmentId: { required: true }
+                , RoleId: { required: true }
+                , Birth: { required: true }
+                , Descr: { required: true }
+            }
+        });
     })
 </script>

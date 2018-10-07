@@ -337,7 +337,7 @@
     <Content Include="Scripts\jquery.validate.extend.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\layout.js" />
+    <Content Include="Scripts\widget.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -359,6 +359,8 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Default\Create.cshtml" />
+    <Content Include="Views\Default\Edit.cshtml" />
+    <Content Include="Views\Default\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

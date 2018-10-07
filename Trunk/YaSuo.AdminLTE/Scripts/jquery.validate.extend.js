@@ -1,5 +1,6 @@
 ﻿(function ($, window, undefined) {
-    var Selector = {
+
+    var selector = {
         IgnoreElement: ".ignore, .select2-search__field"
         , ErrorBox: "em"
         , ParentElement: ".form-group"
@@ -13,24 +14,24 @@
 
     function Highlight(element, errorClass, validClass) {
         $(element)
-            .parents(Selector.ParentElement)
-                .removeClass(Selector.SuccessElement)
-                .addClass(Selector.ErrorElement)
-            .find(Selector.HelpElement)
-                .removeClass(Selector.TipElement)
-                .removeClass(Selector.TipSuccessElement)
-                .addClass(Selector.TipErrorElement);
+            .parents(selector.ParentElement)
+                .removeClass(selector.SuccessElement)
+                .addClass(selector.ErrorElement)
+            .find(selector.HelpElement)
+                .removeClass(selector.TipElement)
+                .removeClass(selector.TipSuccessElement)
+                .addClass(selector.TipErrorElement);
     }
 
     function Unhighlight(element, errorClass, validClass) {
         $(element)
-            .parents(Selector.ParentElement)
-                .removeClass(Selector.ErrorElement)
-                .addClass(Selector.SuccessElement)
-            .find(Selector.HelpElement)
-                .removeClass(Selector.TipElement)
-                .removeClass(Selector.TipErrorElement)
-                .addClass(Selector.TipSuccessElement);
+            .parents(selector.ParentElement)
+                .removeClass(selector.ErrorElement)
+                .addClass(selector.SuccessElement)
+            .find(selector.HelpElement)
+                .removeClass(selector.TipElement)
+                .removeClass(selector.TipErrorElement)
+                .addClass(selector.TipSuccessElement);
     }
 
     function OnFocusin(element) {
@@ -46,8 +47,8 @@
     }
 
     $.validator.setDefaults({
-        ignore: Selector.IgnoreElement
-        , errorElement: Selector.ErrorBox
+        ignore: selector.IgnoreElement
+        , errorElement: selector.ErrorBox
         , onfocusin: OnFocusin
         , onfocusout: OnFocusout
         , errorPlacement: ErrorPlacement

@@ -1,12 +1,12 @@
 ﻿.w-150 { width: 150px !important; }
 .w-250 { width: 250px !important; }
 
-.SearchBox { padding-bottom: 0px; }
-.SearchBody { padding-top: 15px; }
-    .SearchBody .control-label { text-align: left; }
+.pad-t15 { padding-top: 15px; }
+
+.pad-b0 { padding-bottom: 0px; }
 
 @media (max-width: 991px) {
-    .SearchBox .input-group { padding-top: 10px; }
+    .SearchBox { padding-top: 10px; }
 }
 
 .has-success .select2-container--default .select2-selection--single,
