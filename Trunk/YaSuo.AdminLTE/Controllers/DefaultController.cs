@@ -9,6 +9,14 @@ namespace YaSuo.AdminLTE.Controllers
 {
     public class DefaultController : Controller
     {
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+
+
+
         // GET: /Default/Index
         public ActionResult Index()
         {

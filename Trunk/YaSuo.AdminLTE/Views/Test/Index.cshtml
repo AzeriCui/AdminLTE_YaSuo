@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<input type="file" name="name1" id="name1" value="" url="@Url.Action("T","Test")" />
+
+<script src="~/Scripts/jquery.wy.upload.js"></script>
+<script>
+    $(function () {
+        $("#name1").change(function () {
+            $("#name1").WyUpload({
+                Name: "name1",
+                IFrameName: "iframe",
+                FormName: "form",
+                Url: $(this).attr("url"),
+                OnComplete: function (result) {
+
+                    //alert(typeof (result))
+
+                    //alert(result.Code);
+                },
+            });
+        })
+    })
+</script>
+

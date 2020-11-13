@@ -114,6 +114,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -337,6 +338,7 @@
     <Content Include="Scripts\jquery.validate.extend.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.wy.upload.js" />
     <Content Include="Scripts\widget.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -361,6 +363,10 @@
     <Content Include="Views\Default\Create.cshtml" />
     <Content Include="Views\Default\Edit.cshtml" />
     <Content Include="Views\Default\Details.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Default\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutRes.cshtml" />
+    <Content Include="Views\Shared\_LayoutResIE9.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
